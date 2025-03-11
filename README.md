@@ -85,7 +85,7 @@ Below is a short description of each blending technique demonstrated:
 
 2. **Custom Stitching (SIFT + FLANN + Blending)**  
    - Place your images (or use the provided ones) in the same folder as the script or adjust the file paths accordingly.  
-   - Run the custom script (e.g., `python your_custom_stitching_script.py`).  
+   - Run the custom script (e.g., `python main.py`).  
    - The script will detect and match features using SIFT + FLANN, estimate the homography, warp images, and apply the specified blending method.
 
 ---
@@ -98,6 +98,10 @@ Below are the sample results from the **Images/** folder, showcasing each blendi
 ![Alpha Blending](Images/Alpha.png)
 - **Observation:** Some ghosting and visible seams, especially where there is motion or lighting differences.
 
+### Poisson Blending Result
+![Poisson Blending](Images/poisson.png)
+- **Observation:** Can yield seamless color transitions, but may introduce artifacts if the images are not perfectly aligned.
+
 ### Feather Blending Result
 ![Feather Blending](Images/feather.png)
 - **Observation:** Smoother transitions compared to alpha blending, though small intensity differences may still be noticeable.
@@ -109,10 +113,6 @@ Below are the sample results from the **Images/** folder, showcasing each blendi
 ### OpenCV Stitcher Result
 ![OpenCV Stitcher](Images/openCV.png)
 - **Observation:** Leverages robust multi-band blending internally to produce a good overall panorama with minimal seams.
-
-### Poisson Blending Result
-![Poisson Blending](Images/poisson.png)
-- **Observation:** Can yield seamless color transitions, but may introduce artifacts if the images are not perfectly aligned.
 
 Feel free to experiment with your own images—daytime, nighttime, or any scene you like. The final results may vary depending on factors such as image overlap, exposure differences, and the presence of moving objects.
 
